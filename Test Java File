@@ -1,0 +1,71 @@
+// 🎵 Define your playlist (array of objects)
+const songs = [
+  { title: "Army Dreamers", artist: "Kate Bush", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/Army%20Dreamers%20-%20Kate%20Bush%20%5Bmicrotonal%20cover%20in%2029edo%5B.mp3" },
+  { title: "Atariwave", artist: "Quoc", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/Atariwave%20-%20Quoc.mp3" },
+  { title: "Lilium", artist: "Elfen Lied OST", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/Lilium%20-%20Elfen%20Lied%20%5BMusic%20Box%5D.mp3" },
+  { title: "My Will", artist: "Dream", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/My%20Will%20-%20Dream%20%5BInuyasha%20ED1%5D.mp3" },
+  { title: "Passion", artist: "Utada Hikaru (Piano Cover)", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/Passion%20-%20Utada%20Hikaru%20%5BPiano%20Cover%20-%20Kyle%20Landry%5D%20(1).mp3" },
+  { title: "Luv(sic) Part 2", artist: "Nujabes feat. Shing02", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/Nujabes%20-%20Luv(sic)%20Part%202%20feat.Shing02.mp3" },
+  { title: "Promise (Reprise)", artist: "Akira Yamaoka (Music Box)", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/Promise%20(Reprise)%20-%20Akira%20Yamaoka%20%5BMusic%20Box%5D.mp3" },
+  { title: "Simple and Clean", artist: "Utada Hikaru (Music Box)", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/Simple%20and%20Clean%20-%20Kingdom%20Hearts%20%5BMusic%20Box%5D.mp3" },
+  { title: "夢見てもいいじゃないの (Can't I Even Dream)", artist: "Hatsune Miku", link: "https://raw.githubusercontent.com/Rapolaro/Music-Hosting/main/夢見てもいいじゃないの%20-Can't%20I%20Even%20Dream%20-%20Miku%20Hatsune%20(1).mp3" }
+];
+
+// 🎶 Set up the initial state
+let currentSongIndex = 0;
+
+// 📌 NEW: Create the music player container dynamically
+const musicContainer = document.createElement("div");
+musicContainer.id = "music-container";
+musicContainer.innerHTML = `
+    <div id="music-player">
+        <audio id="audio-player" controls></audio>
+        <div id="controls">
+            <button id="prev">⏮️</button>
+            <button id="playPause">⏯️</button>
+            <button id="next">⏭️</button>
+        </div>
+        <div id="now-playing">Now Playing: (None)</div>
+    </div>
+`;
+document.body.appendChild(musicContainer); // 📌 Appends it to the page
+
+// 🎛️ Select elements
+const audio = document.getElementById("audio-player");
+const prevButton = document.getElementById("prev");
+const playPauseButton = document.getElementById("playPause");
+const nextButton = document.getElementById("next");
+const nowPlayingText = document.getElementById("now-playing");
+
+// 🔄 Function to load and play a song
+function loadSong(index) {
+  audio.src = songs[index].link;
+  audio.play();
+  
+  // 📌 FIXED: Ensure "Now Playing" updates properly
+  setTimeout(() => {
+    nowPlayingText.textContent = `Now Playing: ${songs[index].title} by ${songs[index].artist}`;
+  }, 500); // Small delay to ensure it loads
+}
+
+// 🎯 Event Listeners for Controls
+prevButton.onclick = function () {
+  currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+  loadSong(currentSongIndex);
+};
+
+playPauseButton.onclick = function () {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+};
+
+nextButton.onclick = function () {
+  currentSongIndex = (currentSongIndex + 1) % songs.length;
+  loadSong(currentSongIndex);
+};
+
+// 🎬 Start the first song on page load
+loadSong(currentSongIndex);
