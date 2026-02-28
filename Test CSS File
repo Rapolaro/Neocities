@@ -7,19 +7,45 @@
 }
 
 /* 🎨 BODY BACKGROUND & TEXT */
+
 body {
-    background-color: #fdf6e3; /* Cozy beige */
+  background-image: url('https://slimebunny.neocities.org/HomeImages/image.png'); 
+  background-repeat: repeat;
+  background-size: 200px auto; 
+}
+
+body {
+    background-color: #e3f1fd; /* Cozy beige */
     color: #333;
     padding: 20px;
 }
 
 /* 🌟 HEADER */
 .landing {
-    background-color: #ff9f20;
+    background-color: #C0DDF4;
     color: white;
     padding: 40px;
     text-align: center;
     font-size: 24px;
+}
+/* TRANSPARENT GIF OVERLAY */
+.sparkle-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://slimebunny.neocities.org/HomeImages/BlueSparkle.gif'); /* your sparkle/rain/confetti gif */
+  background-repeat: repeat;
+  background-size: 150px auto;
+  pointer-events: none; /* so it doesn’t block clicks */
+  z-index: 1;
+  opacity: 0.75; /* adjust to taste */
+}
+
+.content-wrapper, header, main, footer {
+  position: relative;
+  z-index: 2; /* higher than overlay */
 }
 
 /* 🏠 3-COLUMN LAYOUT */
@@ -29,6 +55,12 @@ body {
     margin: 20px auto;
     justify-content: space-between;
     gap: 10px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* 👈 centers all children horizontally for the 3 column "1 column" content wrapper, to fix the music player alignment w center */
 }
 
 /* 📦 COLUMN SETTINGS */
@@ -41,48 +73,170 @@ body {
 .left-column, .right-column {
     width: 25%;
     background-color: #dafdff; /* Light blue */
-    border: 1px dashed #ff9f20;
+    border: 1px dashed #716dba;
 }
+
+
 
 /* 📜 MIDDLE COLUMN (MAIN CONTENT) */
 .middle-column {
     width: 50%;
-    background-color: white;
-    border: 1px solid #ff9f20;
+    background-color: #d6ecf8;
+    border: 1px solid #716dba;
 }
 
 /* 🏁 FOOTER */
 .footer {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #9bb9d380;
     color: white;
     padding: 10px;
     margin-top: 20px;
     text-align: center;
 }
 
-/* 🎵 MUSIC PLAYER */
-#music-container {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
+/* General Player Styling */
+.player-container {
+    background: linear-gradient(#cdcff0, #cdcff0, #bae1ff, #716dba, #cdcff0, #bae1ff);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 500px;  /* Rectangular shape */
+    height: 180px; /* Enough height for UI */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* 🎧 PLAYER CONTROLS */
-#controls button {
-    background: none;
+/* Song Info Marquee */
+.marquee {
+    width: 90%;
+    text-align: center;
+    font-size: 14px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.marquee-content {
+    animation: marquee 10s linear infinite;
+    display: inline-block;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background: white;
     border: none;
-    color: white;
-    font-size: 18px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
-#now-playing {
-    color: white;
-    margin-left: 10px;
+/* Bunny Progress Bar */
+.progress-container {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    margin: 10px 0;
 }
+
+.bunny-progress {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -6px;
+    left: 0;
+    transform: scaleX(-1); /* Adjust this if backwards */
+    cursor: grab;
+    user-select: none;
+}
+
+/* Speed Control (Nightcore) */
+.speed-control {
+    width: 80%;
+    margin: 10px 0;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+    .player-container {
+        width: 90%;
+        height: auto;
+    }
+    .progress-container, .speed-control {
+        width: 100%;
+    }
+    button {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Dropdown Navigation */
+.dropdown-nav {
+  position: relative;
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+}
+
+.menu-toggle {
+  background-color: #a9c9ff;
+  border: 2px solid #3a64a6;
+  color: #1a2e52;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #3a64a6;
+}
+
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background-color: #e5f0ff;
+  border: 2px solid #3a64a6;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 180px;
+  z-index: 99;
+  box-shadow: 2px 2px 0 #3a64a6;
+}
+
+.menu-items li {
+  border-bottom: 1px solid #a1c0e8;
+}
+
+.menu-items li:last-child {
+  border-bottom: none;
+}
+
+.menu-items a {
+  display: block;
+  padding: 8px 12px;
+  color: #1a2e52;
+  text-decoration: none;
+}
+
+.menu-items a:hover {
+  background-color: #c0dcff;
+}
+
