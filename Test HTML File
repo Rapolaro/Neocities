@@ -1,74 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Tags for Social Sharing -->
-    <meta property="og:description" content="︶꒷꒦︶ ๋࣭ ⭑Bunny's House︶꒷꒦︶ ๋࣭ ⭑">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <!-- Meta Tags for Social Sharing -->
+    <meta property="og:description" content="︶꒷꒦︶ ๋࣭ ⭑Bunny's Warren︶꒷꒦︶ ๋࣭ ⭑">
     <meta property="og:title" content="Bunny">
     <meta property="og:image" content="/path/to/banner-image.jpg"> <!-- Replace with your banner URL -->
-
+        
+        
     <!-- Page Title -->
-    <title>︶꒷꒦︶ ๋࣭ ⭑Bunny's House︶꒷꒦︶</title>
+    <title>︶꒷꒦︶ ๋࣭ ⭑where am I?︶꒷꒦︶</title>
 
     <!-- Link to Stylesheet -->
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    
 
     <!-- Favicon -->
     <link rel="icon" type="image/gif" href="/path/to/favicon.gif"> <!-- Replace with your favicon URL -->
-
-    <!-- Link to JavaScript -->
+    
+          <!-- Link to JavaScript -->
     <script src="script.js" defer></script>
 </head>
-
 <body>
 
     <!-- LANDING AREA (Big Header) -->
     <header class="landing">
-        <h1>WELCOME TO MY SITE</h1>
-        <p>Some kind of intro text here. Could be a graphic. Could be both.</p>
+        <h1>i'm bunny ପ(๑•ᴗ•๑)ଓ♡</h1>
+        <p>now come along, quickly, there's not much time to waste. hold my hand!</p>
     </header>
 
     <!-- MAIN CONTENT (3-Column Layout) -->
-    <div class="container">
+    <div class="sparkle-overlay"></div>
+    <div class="content-wrapper">
+        <div class="container">
         
         <!-- LEFT COLUMN -->
         <aside class="left-column">
-            <h2>Left Stuff</h2>
-            <p>Things, links, or widgets go here.</p>
+            <h2>places</h2>
+            <p>we're going down the rabbithole together, okay?</p>
+<br>
+        <!-- NAVIGATION DROPDOWN MENU -->
+            <nav class="dropdown-nav">
+  <button class="menu-toggle">☰NeoLinks </button>
+  <ul class="menu-items">
+    <li><a href="hub.html">home</a></li>
+    <li><a href="goth.html">goth</a></li>
+    <li><a href="sprites.html">sprites</a></li>
+    <li><a href="art.html">my art</a></li>
+    <li><a href="stims.html">stims</a></li>
+  </ul>
+                
+</nav> 
+            <h1>portals</h1>
+             <ul>
+            <li><a href="https://myanimelist.net/animelist/bunnyuchiha" target="_blank">anime reviews</a></li>
+            <li><a href="https://www.tumblr.com/nightcorebunny" target="_blank">main tumblr</a></li>
+            <li><a href="https://www.youtube.com/@watercolorbunny" target="_blank">art youtube</a></li>
+            <li><a href="https://archiveofourown.org/users/bunnyuchiha" target="_blank">AO3 fanfics</a></li>
+          </ul>
+
         </aside>
 
         <!-- MIDDLE COLUMN (MAIN CONTENT) -->
         <main class="middle-column">
-            <h2>Main Content</h2>
-            <p>This is the main content area. This could be an iframe or whatever you want.</p>
+            <h2>please take a look around, make yourself at home.</h2> <br>
+            <p>༺｡° .ᘛ edit log  ᘚ. °｡༻ <br> </p> 
+            <ul>
+            <li> 11.15.2024 created site. absolutely lost. </li>
+            <li> 02.13.2025 worked on music player </li>
+            <li> 04.29.2025 updated links. CSS styling for colors. transferred old myanimelist.</li>
+            <li> 04.30.2025 adjusted background and transparent sparkle effect. adjusted column centering as flex for music player. </li>
+            <li> 08.25.2025 added blinkies! also, happy birthday to me tomorrow! </li> 
+            <li> 02.26.2026 remade my webdesign blog on tumblr. designed and updated pixel art background. </li>
+            </ul> 
+            
+            <pe>𐔌 . ⋮ to do .ᐟ ֹ ₊ ꒱ <br></p>
+            <ul>
+            <li>oc pages </li>
+            <li>shrines </li>
+            <li>favorite games </li>
+            <li>goth</li>
+            <li>sprites </li>
+            <li>my art </li>
+            <li>stims </li>
+            <li>things i like </li>
         </main>
 
         <!-- RIGHT COLUMN -->
         <aside class="right-column">
-            <h2>Right Stuff</h2>
-            <p>More fun things. Updates? Widgets? Whatever.</p>
+            <h2>things</h2>
+            <p>stickers, collections, trinkets, disturbing subtexts, spatial anomalies, plushies, oddities, suspect figures.</p>
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/warningcutenessahead.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/somebunnylovesme.gif" width="150" height="20"/>
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/alifewhatsthat.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/bookcollector.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/loserandproud.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/ilikefish.gif" width="150" height="20"/>
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/idreaminpixels.webp" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/rainbow.webp" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/imustntrun.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/mycomputerneversleeps.webp" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/ilovestars.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/sleepwhatsthat.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/ibelieveinme.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/dreamtraveller.gif" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/digital.webp" width="150" height="20"/> 
+            <img src="https://slimebunny.neocities.org/HomeImages/Blinkies/angelfromheaven.gif" width="150" height="20"/> 
         </aside>
-    </div> <!-- FIXED: Properly closed the container div -->
+    </div>
 
     <!-- FOOTER (Pixel Bar or Links) -->
     <footer class="footer">
-        <p>Some kind of pixel bar. Maybe a transparent overlay.</p>
-    </footer>
+        <p>do do you hear that? it's pretty.. try listening. </p>
+    </footer> 
+ <!-- 📌 FIXED: Properly added the Music Player section -->
+    <div class="player-container">
+        <div class="marquee">
+            <div class="marquee-content">🎵 <span id="songTitle">Loading...</span> - <span id="artist">Artist</span> 🎵</div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="bunny-progress" draggable="true">🐇</div>
+        </div>
+        
+        <div class="time-display">
+    <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+</div>
 
-    <!-- 📌 FIXED: Properly added the Music Player section -->
-    <div id="music-container">
-        <div id="music-player">
-            <audio id="audio-player" controls></audio>
-            <div id="controls">
-                <button id="prev">⏮️</button>
-                <button id="playPause">⏯️</button>
-                <button id="next">⏭️</button>
-            </div>
-            <div id="now-playing">Now Playing: (None)</div>
+        <div class="controls">
+            <button id="rewind">⏪</button>
+            <button id="playPause">▶️</button>
+            <button id="fastForward">⏩</button>
+        </div>
+
+        <div class="dj-wheel"></div>
+        
+        <input type="range" class="speed-control" min="0.5" max="2" step="0.1" value="1">
+        
+        <audio id="audioPlayer" src="https://example.com/song1.mp3"></audio>
         </div>
     </div>
-
-</body>
+    </body>
 </html>
